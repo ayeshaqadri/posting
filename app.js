@@ -1,3 +1,6 @@
+var background;
+
+
 function addPost() {
     var postTitle = document.getElementById("post-title");
     var postDescrip = document.getElementById("post-description");
@@ -5,14 +8,14 @@ function addPost() {
 
     if (postTitle.value.trim() && postDescrip.value.trim()) {
         posts.innerHTML += `
-        <div class="card">
+        <div class="card mt-3">
             <div class="card-header fontStyle">@Posts</div>
-            <div class="card-body">
+            <div class="card-body" style="background-image:url(${background})">
                 <h5 class="card-title fontStyle" id="updatedPost">${postTitle.value}</h5>
                 <p class="card-text fontStyle" id="updatedDescription">${postDescrip.value}</p>
             </div>
             <div class="d-flex p-3 gap-3">
-                <button type="button" class="btn btn-success" onclick="editPost()">Edit</button>
+                <button type="button" class="btn btn-success" onclick="editPost(event)">Edit</button>
                 <button type="button" class="btn btn-danger" onclick="confirmRemove(event)">Delete</button>
             </div>
         </div>`;
@@ -68,4 +71,11 @@ async function editPost() {
       var updatedDescription = document.getElementById("updatedDescription")
       updatedPost.innerHTML = formValues[0]
       updatedDescription.innerHTML = formValues[1]
+}
+
+function selectImg(src){
+
+    background =src
+
+    event.target.className +=" selectImg"
 }
