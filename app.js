@@ -73,9 +73,34 @@ async function editPost() {
       updatedDescription.innerHTML = formValues[1]
 }
 
-function selectImg(src){
 
-    background =src
+function selectImg(src, event) {
+    // Store the selected image as background
+    background = src;
 
-    event.target.className +=" selectImg"
+    // Remove 'selectImg' class from all images
+    const allImages = document.querySelectorAll('.small-img');
+    allImages.forEach(img => img.classList.remove('selectImg'));
+
+    // Add 'selectImg' class to the clicked image for visual feedback
+    event.target.classList.add('selectImg');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function selectImg(src){
+
+//     background =src
+
+//     event.target.className +=" selectImg"
+// }

@@ -29,10 +29,59 @@
     border-radius: 10px;
 }
 .small-img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 10px;
+
 }
 .selectImg{
-    border: 5px solid black;
+    border: 2px solid black;
+}
+.images{
+    gap: 10px; 
+}
+.box{
+    width: 150%; 
+}
+/* media quairy */
+@media screen and (max-width:800px){
+    .small-img{
+        width: 30px;
+        height: 30px;
+    }
+    .images{
+        gap: 10px; 
+
+
+    }
+    .box{
+        width: 150%; 
+    }
+}
+
+
+@media screen and (max-width:767px){
+    .small-img{
+        width: 50px;
+        height: 50px;
+    }
+    .images{
+        gap: 30px; 
+    }
+    .box{
+        width: 100%; 
+    }
+}
+
+@media screen and (max-width:500px){
+    .small-img{
+        width: 30px;
+        height: 30px;
+    }
+    .images{
+        gap: 10px; 
+    }
+    .box{
+        width: 100%; 
+    }
 }
