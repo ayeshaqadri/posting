@@ -56,8 +56,8 @@ async function editPost() {
     const { value: formValues } = await Swal.fire({
         title: "Update your post",
         html: `
-          <input id="swal-input1" class="swal2-input" placeholder="Write here..." >
-          <input id="swal-input2" class="swal2-input" placeholder="Write here..." >
+          <input id="swal-input1" class="swal2-input alert-input" placeholder="Write here..." >
+          <input id="swal-input2" class="swal2-input alert-input" placeholder="Write here..." >
         `,
         focusConfirm: false,
         preConfirm: () => {
